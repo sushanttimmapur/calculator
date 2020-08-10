@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #757575;
+}
+
+#calculator {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #494949;
+}
+
+#display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    height: 40px;
+    background-color: #494949;
+    color: #fff;
+    padding: 10px;
+}
+
+#keys {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "k-7 k-8 k-9 k-del k-clr"
+        "k-4 k-5 k-6 k-add k-sub"
+        "k-1 k-2 k-3 k-mul k-div"
+        "k-0 k-0 k-com k-equ k-equ"
+    ;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#k-0{ grid-area: k-0; }
+#k-1{ grid-area: k-1; }
+#k-2{ grid-area: k-2; }
+#k-3{ grid-area: k-3; }
+#k-4{ grid-area: k-4; }
+#k-5{ grid-area: k-5; }
+#k-6{ grid-area: k-6; }
+#k-7{ grid-area: k-7; }
+#k-8{ grid-area: k-8; }
+#k-9{ grid-area: k-9; }
+#k-com{ grid-area: k-com; }
+#k-add{ grid-area: k-add; }
+#k-sub{ grid-area: k-sub; }
+#k-mul{ grid-area: k-mul; }
+#k-div{ grid-area: k-div; }
+#k-equ{ grid-area: k-equ; }
+#k-del{ grid-area: k-del; }
+#k-clr{ grid-area: k-clr; }
+
+.key {
+    text-align: center;
+    background-color: #fff;
+    color: #494949;
+    border: 1px solid #a4a4a4;
+    padding: 12px 0;
+    transition: 200ms;
+}
+
+.key:hover {
+    background-color: #eeeeee;
+}
+
+.special {
+    text-align: center;
+    background-color: #a4a4a4;
+    color: #494949;
+    border: none;
+    padding: 10px 0;
+    transition: 200ms;
+}
+
+.special:hover {
+    background-color: #707070;
+}
